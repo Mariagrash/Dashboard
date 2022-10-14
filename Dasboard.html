@@ -7,13 +7,15 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <link rel="stylesheet" href="style.css" />
     <link rel="stylesheet" href="https://unicons.iconscout.com/release/v4.0.0/css/line.css" />
+    <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
     <title>Online Document Registration</title>
 </head>
 
 <body>
     <div class="sidebar-wrapper">
         <div style="text-align: center; margin: 10px;">
-            <img src="img/cebu city logo.png" alt="logo" />
+            <img src="./img/cebu_city_logo.png" alt="logo" />
             <p>Documents Online Registration</p>
         </div>
         <nav>
@@ -76,12 +78,12 @@
                             </div>
                             <div class="star-light">327</div>
                         </div>
-                        <img src="img/avatar women.png" alt="avatar" />
+                        <img src="./img/avatar_women.png" alt="avatar" />
                     </div>
                 </div>
             </header>
             <section class="main">
-                <div class="box box-1" style="margin: 10px;">
+                <!-- <div class="box box-1" style="margin: 10px;">
                     <div class="box-left">
                         <h4>Congratulations Grasya</h4>
                         <p>
@@ -90,22 +92,24 @@
                         </p>
                         <a href="#">View Request Documents</a>
                     </div>
-                </div>
+                </div> -->
 
                 <div class="row">
                     <div class="column">
-                        <div class="box box-2" style="padding: 20px;">
+                        <div class="box box-2" style="padding: 20px;" onclick="document.getElementById('id01').style.display='block', bySelectedRequest('birth_certificate_id', 'Birth Certificate')">
+                            <img src="./img/avatar_user.png" alt="">
                             <div class="box-details" style="padding: 20px;">                                
-                                <h1 style="font-size: 25px;"><i class="uil uil-user"></i> Customers</h1>
-                                <h2 style="font-size: 50px; text-align: center;">54</h2>
+                                <h1 style="font-size: 25px;"><i class="uil uil-user"></i> Birth Certificate</h1>
+                                <h2 style="font-size: 50px; text-align: center;" id="birth_certificate_id"></h2>
                             </div>
                         </div>
                     </div>
                     <div class="column">
-                        <div class="box box-3" style="padding: 20px;">
+                        <div class="box box-3" style="padding: 20px;" onclick="document.getElementById('id01').style.display='block', bySelectedRequest('marriage_certificate_id', 'Marriage Certificate')">
+                            <img src="./img/avatar_user.png" alt="">
                             <div class="box-details" style="padding: 20px;">
-                                <h1 style="font-size: 25px;"><i class="uil uil-clipboard-notes"></i> Projects</h1>
-                                <h2 style="font-size: 50px; text-align: center;">79</h2>
+                                <h1 style="font-size: 25px;" ><i class="uil uil-clipboard-notes"></i> Marriage Certificate</h1>
+                                <h2 style="font-size: 50px; text-align: center;" id="marriage_certificate_id"></h2>
                             </div>
                         </div>
                     </div>
@@ -113,65 +117,82 @@
 
                 <div class="row">
                     <div class="column">
-                        <div class="box box-4" style="padding: 20px;">
+                        <div class="box box-4" style="padding: 20px;" onclick="document.getElementById('id01').style.display='block', bySelectedRequest('cenomar_id', 'Cenomar')">
+                            <img src="./img/avatar_user.png" alt="">
                             <div class="box-details" style="padding: 20px;">
-                                <h1 style="font-size: 25px;"><i class="uil uil-shopping-bag"></i> Orders</h1>
-                                <h2 style="font-size: 50px; text-align: center;">124</h2>
+                                <h1 style="font-size: 25px;"><i class="uil uil-shopping-bag"></i> Cenomar</h1>
+                                <h2 style="font-size: 50px; text-align: center;" id="cenomar_id"></h2>
                             </div>
                         </div>
                     </div>
                     <div class="column">
-                        <div class="box box-5" style="padding: 20px;">
+                        <div class="box box-5" style="padding: 20px;" onclick="document.getElementById('id01').style.display='block', bySelectedRequest('death_certificate_id', 'Death Certificate')">
+                            <img src="./img/avatar_user.png" alt="">
                             <div class="box-details" style="padding: 20px;">
-                                <h1 style="font-size: 25px;"><i class="uil uil-usd-circle"></i> Income</h1>
-                                <h2 style="font-size: 50px; text-align: center;">$6K</h2>
+                                <h1 style="font-size: 25px;"><i class="uil uil-usd-circle"></i> Death Certificate</h1>
+                                <h2 style="font-size: 50px; text-align: center;" id="death_certificate_id"></h2>
                             </div>
                         </div>
                     </div>
                 </div>
 
+                <div class="row">
+                    <div class="column">
+                        <div class="box box-2" style="padding: 20px;" onclick="document.getElementById('id01').style.display='block', bySelectedRequest('scholarship_id', 'Scholarship')">
+                            <img src="./img/avatar_user.png" alt="">
+                            <div class="box-details" style="padding: 20px;">                                
+                                <h1 style="font-size: 25px;"><i class="uil uil-user"></i> Scholarship</h1>
+                                <h2 style="font-size: 50px; text-align: center;" id="scholarship_id"></h2>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="column">
+                        <div class="box box-3" style="padding: 20px;" onclick="document.getElementById('id01').style.display='block', bySelectedRequest('business_permit_id', 'Business Permit')">
+                            <img src="./img/avatar_user.png" alt="">
+                            <div class="box-details" style="padding: 20px;">
+                                <h1 style="font-size: 25px;"><i class="uil uil-clipboard-notes"></i> Business Permit</h1>
+                                <h2 style="font-size: 50px; text-align: center;" id="business_permit_id"></h2>
+                            </div>
+                        </div>
+                    </div>
+                </div>
 
+                <div class="row">
+                    <div class="column">
+                        <div class="box box-4" style="padding: 20px;" onclick="document.getElementById('id01').style.display='block', bySelectedRequest('appointment_id', 'Appointment')">
+                            <img src="./img/avatar_user.png" alt="">
+                            <div class="box-details" style="padding: 20px;">
+                                <h1 style="font-size: 25px;"><i class="uil uil-shopping-bag"></i> Appointment</h1>
+                                <h2 style="font-size: 50px; text-align: center;" id="appointment_id"></h2>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="column">
+                        <div class="box box-5" style="padding: 20px;" onclick="document.getElementById('id01').style.display='block', bySelectedRequest('suggestion_id', 'Suggestions')">
+                            <img src="./img/avatar_user.png" alt="">
+                            <div class="box-details" style="padding: 20px;">
+                                <h1 style="font-size: 25px;"><i class="uil uil-usd-circle"></i> Suggestions</h1>
+                                <h2 style="font-size: 50px; text-align: center;" id="suggestion_id"></h2>
+                            </div>
+                        </div>
+                    </div>
+                </div>
 
-
-                <!-- <div class="box box-2" style="width: 40%">
-            <div class="box-details">
-              <h5>54</h5>
-              <span>customers</span>
-            </div>
-            <div class="box-icon">
-              <i class="uil uil-user"></i>
-            </div>
-          </div>
-          <div class="box box-3">
-            <div class="box-details">
-              <h5>79</h5>
-              <span>Projects</span>
-            </div>
-            <div class="box-icon">
-              <i class="uil uil-clipboard-notes"></i>
-            </div>
-          </div>
-          <div class="box box-4">
-            <div class="box-details">
-              <h5>124</h5>
-              <span>Orders</span>
-            </div>
-            <div class="box-icon">
-              <i class="uil uil-shopping-bag"></i>
-            </div>
-          </div>
-          <div class="box box-5">
-            <div class="box-details">
-              <h5>$6K</h5>
-              <span>Income</span>
-            </div>
-            <div class="box-icon">
-              <i class="uil uil-usd-circle"></i>
-            </div>
-          </div> -->
+                <div id="id01" class="w3-modal">
+                    <div class="w3-modal-content w3-card-4" style="padding: 20px; padding-bottom: 30px; margin-left: 30%;">
+                      <header class="w3-container"> 
+                        <span onclick="document.getElementById('id01').style.display='none'" 
+                        class="w3-button w3-display-topright">&times;</span>
+                        <h2 id="header-title"></h2>
+                      </header>
+                      <div class="w3-container">
+                        <ul class="w3-ul w3-card" id="list">
+                          </ul>
+                      </div>
+                    </div>
+                  </div>
             </section>
         </main>
-        <!-- <script src="https://kit.fontawesome.com/yourcode.js" crossorigin="anonymous"></script> -->
         <script src="main.js"></script>
 </body>
 
