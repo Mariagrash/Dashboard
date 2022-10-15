@@ -1,0 +1,234 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="style.css" />
+    <link rel="stylesheet" href="https://unicons.iconscout.com/release/v4.0.0/css/line.css" />
+    <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+    <title>Online Document Registration</title>
+</head>
+
+<body>
+    <div class="sidebar-wrapper">
+        <div style="text-align: center; margin: 10px;">
+            <img src="./img/cebu_city_logo.png" alt="logo" />
+            <p>Documents Online Registration</p>
+        </div>
+        <nav>
+            <ul>
+                <li>
+                    <a href="#">
+                        <i class="uil uil-home"></i>
+                        <div class="title">Home</div>
+                    </a>
+                </li>
+                <li>
+                    <a href="#">
+                        <i class="uil uil-users-alt"></i>
+                        <div class="title">Services</div>
+                    </a>
+                </li>
+                <li>
+                    <a href="#">
+                        <i class="uil uil-postcard"></i>
+                        <div class="title">About</div>
+                    </a>
+                </li>
+                <li>
+                    <a href="#">
+                        <i class="uil uil-chat-bubble-user"></i>
+                        <div class="title">Account</div>
+                    </a>
+                </li>
+                <li>
+                    <a href="#">
+                        <i class="uil uil-comment-alt-message"></i>
+                        <div class="title">Messages</div>
+                    </a>
+                </li>
+                <li>
+                    <a href="#">
+                        <i class="uil uil-sign-out-alt"></i>
+                        <div class="title">Sign Out</div>
+                    </a>
+                </li>
+            </ul>
+        </nav>
+    </div>
+    <div class="container" id="top">
+        <main class="content">
+            <header>
+                <div class="header-wrapper" style="margin: 10px;">
+                    <div class="header-left">
+                        <div class="toggle-icon">
+                            <i class="uil uil-bars"></i>
+                        </div>
+                        <i class="uil uil-search"></i>
+                        <input type="text" name="" placeholder="Search" />
+                    </div>
+                    <div class="header-right">
+                        <div class="star-container">
+                            <div class="star-left">
+                                <i class="uil uil-star"></i>
+                                <span>star</span>
+                            </div>
+                            <div class="star-light">327</div>
+                        </div>
+                        <img src="./img/avatar_women.png" alt="avatar" />
+                    </div>
+                </div>
+            </header>
+            <section class="main">
+                <!-- <div class="box box-1" style="margin: 10px;">
+                    <div class="box-left">
+                        <h4>Congratulations Grasya</h4>
+                        <p>
+                            You successfully fill in the information needed. Please wait for
+                            the immediately response. of your request.
+                        </p>
+                        <a href="#">View Request Documents</a>
+                    </div>
+                </div> -->
+
+                <div class="row">
+                    <div class="column">
+                        <div class="box box-2" style="padding: 20px;">
+                            <img src="./img/avatar_user.png" alt="">
+                            <div class="box-details" style="padding: 20px;">
+                                <h1 style="font-size: 25px;"><i class="uil uil-user"></i> Birth Certificate</h1>
+                                <button onclick="getNumbersOfRequest('birth_certificate_id')">Show Numbers or
+                                    Requests</button>
+                                <h2 style="font-size: 50px; text-align: center; cursor: pointer;"
+                                    id="birth_certificate_id"
+                                    onclick="document.getElementById('id01').style.display='block', bySelectedRequest('birth_certificate_id', 'Birth Certificate')">
+                                </h2>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="column">
+                        <div class="box box-3" style="padding: 20px;">
+                            <img src="./img/avatar_user.png" alt="">
+                            <div class="box-details" style="padding: 20px;">
+                                <h1 style="font-size: 25px;"><i class="uil uil-clipboard-notes"></i> Marriage
+                                    Certificate</h1>
+                                <button onclick="getNumbersOfRequest('marriage_certificate_id')">Show Numbers or
+                                    Requests</button>
+                                <h2 style="font-size: 50px; text-align: center; cursor: pointer;" id="marriage_certificate_id"
+                                    onclick="document.getElementById('id01').style.display='block', bySelectedRequest('marriage_certificate_id', 'Marriage Certificate')">
+                                </h2>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="row">
+                    <div class="column">
+                        <div class="box box-4" style="padding: 20px;">
+                            <img src="./img/avatar_user.png" alt="">
+                            <div class="box-details" style="padding: 20px;">
+                                <h1 style="font-size: 25px;"><i class="uil uil-shopping-bag"></i> Cenomar</h1>
+                                <button onclick="getNumbersOfRequest('cenomar_id')">Show Numbers or Requests</button>
+                                <h2 style="font-size: 50px; text-align: center; cursor: pointer;" id="cenomar_id"
+                                    onclick="document.getElementById('id01').style.display='block', bySelectedRequest('cenomar_id', 'Cenomar')">
+                                </h2>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="column">
+                        <div class="box box-5" style="padding: 20px;">
+                            <img src="./img/avatar_user.png" alt="">
+                            <div class="box-details" style="padding: 20px;">
+                                <h1 style="font-size: 25px;"><i class="uil uil-usd-circle"></i> Death Certificate</h1>
+                                <button onclick="getNumbersOfRequest('death_certificate_id')">Show Numbers or
+                                    Requests</button>
+                                <h2 style="font-size: 50px; text-align: center; cursor: pointer;" id="death_certificate_id"
+                                    onclick="document.getElementById('id01').style.display='block', bySelectedRequest('death_certificate_id', 'Death Certificate')">
+                                </h2>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="row">
+                    <div class="column">
+                        <div class="box box-2" style="padding: 20px;">
+                            <img src="./img/avatar_user.png" alt="">
+                            <div class="box-details" style="padding: 20px;">
+                                <h1 style="font-size: 25px;"><i class="uil uil-user"></i> Scholarship</h1>
+                                <button onclick="getNumbersOfRequest('scholarship_id')">Show Numbers or
+                                    Requests</button>
+                                <h2 style="font-size: 50px; text-align: center; cursor: pointer;" id="scholarship_id"
+                                    onclick="document.getElementById('id01').style.display='block', bySelectedRequest('scholarship_id', 'Scholarship')">
+                                </h2>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="column">
+                        <div class="box box-3" style="padding: 20px;">
+                            <img src="./img/avatar_user.png" alt="">
+                            <div class="box-details" style="padding: 20px;">
+                                <h1 style="font-size: 25px;"><i class="uil uil-clipboard-notes"></i> Business Permit
+                                </h1>
+                                <button onclick="getNumbersOfRequest('business_permit_id')">Show Numbers or
+                                    Requests</button>
+                                <h2 style="font-size: 50px; text-align: center; cursor: pointer;" id="business_permit_id"
+                                    onclick="document.getElementById('id01').style.display='block', bySelectedRequest('business_permit_id', 'Business Permit')">
+                                </h2>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="row">
+                    <div class="column">
+                        <div class="box box-4" style="padding: 20px;">
+                            <img src="./img/avatar_user.png" alt="">
+                            <div class="box-details" style="padding: 20px;">
+                                <h1 style="font-size: 25px;"><i class="uil uil-shopping-bag"></i> Appointment</h1>
+                                <button onclick="getNumbersOfRequest('appointment_id')">Show Numbers or
+                                    Requests</button>
+                                <h2 style="font-size: 50px; text-align: center; cursor: pointer;" id="appointment_id"
+                                    onclick="document.getElementById('id01').style.display='block', bySelectedRequest('appointment_id', 'Appointment')">
+                                </h2>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="column">
+                        <div class="box box-5" style="padding: 20px;">
+                            <img src="./img/avatar_user.png" alt="">
+                            <div class="box-details" style="padding: 20px;">
+                                <h1 style="font-size: 25px;"><i class="uil uil-usd-circle"></i> Suggestions</h1>
+                                <button onclick="getNumbersOfRequest('suggestion_id')">Show Numbers or
+                                    Requests</button>
+                                <h2 style="font-size: 50px; text-align: center; cursor: pointer;" id="suggestion_id"
+                                    onclick="document.getElementById('id01').style.display='block', bySelectedRequest('suggestion_id', 'Suggestions')">
+                                </h2>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div id="id01" class="w3-modal">
+                    <div class="w3-modal-content w3-card-4"
+                        style="padding: 20px; padding-bottom: 30px; margin-left: 30%;">
+                        <header class="w3-container">
+                            <span onclick="document.getElementById('id01').style.display='none'"
+                                class="w3-button w3-display-topright">&times;</span>
+                            <h2 id="header-title"></h2>
+                        </header>
+                        <div class="w3-container">
+                            <ul class="w3-ul w3-card" id="list">
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </section>
+        </main>
+        <script src="main.js"></script>
+</body>
+
+</html>
